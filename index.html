@@ -108,7 +108,8 @@ header{
 
 /* 首屏几何装饰，呼应 IRIS 封面的大色块 */
 .blob{position:absolute;border-radius:50%;z-index:1}
-.blob.red{width:220px;height:220px;background:var(--red);left:-70px;top:40px;opacity:.9}
+/* 不透明度压到 .32：原 .9 时圆块与 h1 前两字重叠，砖红字叠砖红底读不出来 */
+.blob.red{width:220px;height:220px;background:var(--red);left:-70px;top:40px;opacity:.32}
 .blob.cream{width:340px;height:340px;background:var(--paper-2);right:-120px;bottom:-90px}
 .hero-visual{position:relative;z-index:2}
 .hero-visual .stack{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
@@ -186,7 +187,7 @@ section{padding:88px 0;position:relative}
   background:linear-gradient(to top,rgba(20,18,16,.78),transparent);
   font-family:var(--serif);font-size:15px;letter-spacing:.06em;
 }
-.card-cover .cap small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;opacity:.75;margin-top:2px}
+.card-cover .cap small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.2em;opacity:.8;margin-top:3px}
 
 /* ============ 实物细节 ============ */
 .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:56px}
